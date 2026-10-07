@@ -136,19 +136,11 @@ void f(vector<int> arr) {
 }
 ```
 
-```c++
-void f(vector<int>& arr) {
-    int n = arr.size();
-    for (int i = 0; i < n; i++) {
-        for (int j = n + i - 5; j <= n; j++)
-            cout << 1;
-    }
-}
-```
 
 ```c++
 void f(vector<int>& arr) {
     int n = arr.size();
+    if (n == 1) return;
     for (int i = n - 1; i >= 0; i /= 7) {
         cout << 1;
     }
